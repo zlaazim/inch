@@ -40,6 +40,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'rspec', '3.2.0'
   gem 'webrat', '0.7.1'
+  gem 'spork' , '0.9.2'
+  gem 'capybara'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
