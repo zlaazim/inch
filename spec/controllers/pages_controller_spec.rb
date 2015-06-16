@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
-render_views
+
 
 before(:each) do
     #
@@ -19,11 +19,21 @@ before(:each) do
       get :home
       expect(response).to have_http_status(:success)
     end 
-   
-     it "should have the right title" do
-    get :home
-      expect(response.body).to have_selector("title",  :text =>  @base_title + " | Accueil" )
-  end
+   it 'has correct title tag' do
+      title_text = ' | Accueil'
+      get :home
+     #page.should have_selector('head title',  :text => @base_title + " | Accueil")
+     expect(page).to have_title("Simple App du Tutoriel Ruby on Rails | Accueil")
+     # expect(response.body).to have_selector('title', text: @base_title + title_text)
+    end
+
+
+
+
+  #   it "should have the right title" do
+   # get :home
+    #  expect(response.body).to have_selector("title",  :text =>  @base_title + " | Accueil" )
+  #end
     
     end
   
