@@ -52,3 +52,4 @@ production:
   database: inch_production
   username: inch
   password: <%= ENV['INCH_DATABASE_PASSWORD'] %>
+ 
