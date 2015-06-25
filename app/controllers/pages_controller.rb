@@ -16,4 +16,6 @@ class PagesController < ApplicationController
   @titre = "Aide"
   end
 
+
+
 end
