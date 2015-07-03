@@ -29,5 +29,34 @@ module SessionsHelper
    		self.current_user = nil
   	end
 
+  	def current_user?(user)
+  		user == current_user
+  		
+  	end
 
-end
+
+      def deny_access
+      	  store_location
+    	  redirect_to signin_path, :notice => "Merci de vous identifier pour rejoindre cette page."
+      end
+
+		  def redirect_back_or(default)
+		    redirect_to(session[:return_to] || default)
+		    clear_return_to
+		  end
+
+      def deny_access2
+      redirect_to root_path , :notice => "Vous n'avez pas accez a cette page , vous avez été redirigé vers la page d'accuiel."
+      end
+      
+        private
+ 
+    def store_location
+      session[:return_to] = request.fullpath
+    end
+
+    def clear_return_to
+      session[:return_to] = nil
+    end
+
+end 

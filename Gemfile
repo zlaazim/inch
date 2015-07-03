@@ -7,6 +7,7 @@ ruby '2.0.0'
 gem 'rails', '4.2.1'
 # Use mysql as the database for Active Record
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'spork' , '0.9.2'
   gem 'factory_girl_rails'
   gem 'capybara', '2.2.0'
+  gem 'faker'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
